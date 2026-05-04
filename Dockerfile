@@ -1,6 +1,6 @@
 FROM nginx:latest
 RUN apk add --no-cache curl
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY src/nginx.conf /etc/nginx/conf.d/default.conf
 COPY src/index.html /usr/share/nginx/html/index.html
 COPY src/monkey.gif /usr/share/nginx/html/monkey.gif
 
