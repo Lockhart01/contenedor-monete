@@ -1,5 +1,5 @@
 FROM nginx:latest
-RUN apk add --no-cache curl
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 COPY src/nginx.conf /etc/nginx/conf.d/default.conf
 COPY src/index.html /usr/share/nginx/html/index.html
 COPY src/monkey.gif /usr/share/nginx/html/monkey.gif
