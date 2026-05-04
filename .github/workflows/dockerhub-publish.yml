@@ -32,6 +32,6 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/contenedor-monete:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/monete-nginx:latest
           cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/monete-nginx:latest
           cache-to: type=inline
